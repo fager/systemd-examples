@@ -1,0 +1,14 @@
+[Unit]
+Description = PWhois Information Daemon
+Requires=pwhois.socket
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/scripts/pwhois.py
+StandardInput=socket
+StandardOutput=socket
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+

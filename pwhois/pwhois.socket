@@ -1,0 +1,10 @@
+[Unit]
+Description=Whois Socket
+
+[Socket]
+ListenStream=43
+Accept=yes
+
+[Install]
+WantedBy=sockets.target
+
