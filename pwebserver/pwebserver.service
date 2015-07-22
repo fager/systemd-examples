@@ -1,0 +1,20 @@
+[Unit]
+Description=Simple Webserver for Port 8000
+
+[Service]
+# type simple means that this script is running in foreground without fork
+Type=simple
+
+# Which program to start...
+ExecStart=/opt/scripts/pwebserver
+
+# restart, if processes dies
+Restart=on-failure
+
+# Start this Daemon in /var/tmp:
+WorkingDirectory=/var/tmp/
+
+
+[Install]
+WantedBy=multi-user.target
+
