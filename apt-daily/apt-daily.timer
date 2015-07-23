@@ -1,0 +1,19 @@
+[Unit]
+Description=Timer for daily apt jobs
+
+[Timer]
+# 15 minutes delay after boot
+OnBootSec=15min
+
+# run every 5 minutes (demo mode)
+OnUnitActiveSec=5min
+
+# run every day (prod mode)
+#OnUnitActiveSec=1d
+
+# start this service
+Unit=apt-update.service
+
+[Install]
+WantedBy=multi-user.target
+
