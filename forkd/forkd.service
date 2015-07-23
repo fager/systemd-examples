@@ -1,0 +1,12 @@
+[Unit]
+Description=Fork Daemon
+
+[Service]
+ExecStart=/opt/scripts/forkd
+
+CPUQuota=20%
+MemoryLimit=128M
+
+[Install]
+WantedBy=multi-user.target
+
