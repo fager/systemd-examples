@@ -1,0 +1,13 @@
+[Unit]
+Description=Python Memory Eater
+
+[Service]
+Type=simple
+ExecStart=/opt/scripts/pmem.py
+CPUAccounting=1
+MemoryAccounting=1
+Slice=pmem.slice
+
+[Install]
+WantedBy=multi-user.target
+

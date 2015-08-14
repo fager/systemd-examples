@@ -1,0 +1,9 @@
+[Unit]
+Description=pmem Slice
+DefaultDependencies=no
+Before=slices.target
+
+[Slice]
+MemoryAccounting=true
+MemoryLimit=256M
+
